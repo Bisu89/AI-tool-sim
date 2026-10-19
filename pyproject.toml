@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai-sim-designer"
+version = "0.1.0"
+description = "Local CAS reference image and landmark viewer"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+  "numpy>=1.26,<3",
+  "opencv-contrib-python>=4.9,<5",
+  "mss>=9,<11",
+  "PySide6>=6.7,<7",
+  "pydantic>=2.7,<3",
+  "PyYAML>=6,<7",
+]
+
+[project.optional-dependencies]
+landmarks = ["mediapipe>=0.10.14,<0.11"]
+dev = ["pytest>=8,<9", "pytest-qt>=4.4,<5"]
+
+[project.scripts]
+sim-designer = "sim_designer.main:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"

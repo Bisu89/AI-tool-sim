@@ -1,0 +1,27 @@
+logging:
+  level: INFO
+capture:
+  default_region: null
+vision:
+  min_face_size: 40
+  enable_landmarks: true
+simulator:
+  seed: 7
+  render_size: 640
+  max_steps: 120
+  max_step: 0.04
+  probe_dx: 0.02
+  tolerance: 0.002
+  tick_ms: 100
+  session_directory: data/sessions
+  calibration_directory: data/calibrations
+  weights:
+    face_outline: 1.0
+    eyes: 1.0
+    nose: 1.0
+    mouth: 1.0
+    jaw_chin: 1.0
+real:
+  expected_window_title: The Sims 4
+  layout_version: unverified
+  automation_enabled: false

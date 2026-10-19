@@ -1,0 +1,7 @@
+# Legacy/reference weights. Offline optimization uses simulator.weights in app.yaml.
+weights:
+  face_outline: 1.0
+  eyes: 1.0
+  nose: 1.0
+  mouth: 1.0
+  jaw_chin: 1.0
